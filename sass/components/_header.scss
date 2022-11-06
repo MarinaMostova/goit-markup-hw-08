@@ -1,0 +1,27 @@
+.page-header {
+    border-bottom: 1px solid #ececec;
+    position: relative;
+
+    @media screen and (max-width: 767px) {
+        max-width: 480px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.page-header__nav {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.page-header__logo {
+    @media screen and (max-width: 767px) {
+        padding: 16px 0;
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-right: 87px;
+    }
+}

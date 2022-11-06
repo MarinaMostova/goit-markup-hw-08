@@ -1,0 +1,107 @@
+.portfolio-sample {
+    @extend %list;
+    @media screen and (min-width: 768px){
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+ 
+}
+.portfolio-sample__item {
+    margin-bottom: 30px;
+      
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+        display: flex;
+        width: calc((100% - 30px)/2);
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 60px)/3);
+    }
+}
+
+.portfolio-sample__thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transform: translateY(101%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+    .portfolio-sample__link:hover & {
+        transform: translateY(0);
+    }
+}
+
+.overlay__text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    padding: 63px 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+
+    color: $white-text-color;
+}
+
+.portfolio-sample__title {
+    margin-bottom: 4px;
+
+    color: $title-text-color;
+    letter-spacing: 0.06em;
+    font-size: 18px;
+    line-height: 2;
+}
+
+.portfolio-sample__text {
+    color: $prymary-text-color;
+    font-size: 16px;
+    line-height: 1.88;
+     }
+
+.portfolio-sample__card {
+    width: 100%;
+     padding: 20px 24px;
+    border-bottom: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+  }
+
+  .portfolio-sample__card--tall{
+    @media screen and (min-width: 768px) and (max-width: 1199px){
+        padding-bottom: 56px;
+    }
+  }
+
+.portfolio-sample__link {
+    display: block;
+  
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+   }
+
+
+
+
